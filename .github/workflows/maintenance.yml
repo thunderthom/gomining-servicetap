@@ -45,7 +45,92 @@ jobs:
       - name: Run maintenance script
         env:
           # Comma-separated account labels. For each label, add a matching
-          # GOMINING_COOKIES_<LABEL> secret below (e.g. a third account
+          # GOMINING_COOKIES_<LABEL> [
+  [
+    {
+      "name": "brwsr",
+      "value": "da6545dc-a2bb-11f1-bc42-7b598214d74d",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "irtps",
+      "value": "1",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "access_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDE5ODQ0MywiZW1haWwiOiJ0b21hc2hlcmVkaWFwbEBnbWFpbC5jb20iLCJ1c2VyIjp0cnVlLCJpYXQiOjE3ODg3NzY5NzYsImV4cCI6MTc4ODc4MDU3NiwiYXVkIjpbImdlbmRhbGYiXX0.rNoXkPtmMINYtQtI04qMijUskGRhAODdOonNminG2O0",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "refresh_token",
+      "value": "3e32b876-6cb9-4568-9ac1-edc53957ea8c-1788776976899",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "sa-user-id",
+      "value": "s%3A0-4e30c6e8-4456-5a82-58a2-4f931d7ba2fe.Y5qAKxcBnIdyJOg72F25WTufoCb%2Bj0eacMmLwKc%2BqCo",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "sa-user-id-v2",
+      "value": "s%3ATjDG6ERWWoJYok-THXui_lEsjrs.HXw%2B7RzQTVJQTYG7K1Mox1LRCMxZZMWfJqLg8pdEH3Y",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  [
+    {
+      "name": "sa-user-id-v3”",
+      "value": "s%253A.o6W7wkJsHSTU4%252BLlDruZ%252FwNjVcUZZMvakQpSatDoAgo",
+      "domain": ".gomining.com",
+      "path": "/",
+      "expires": 1234567890,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ]
+]
           # needs GOMINING_ACCOUNT_LABELS: PRIMARY,SECONDARY,THIRD plus a
           # new GOMINING_COOKIES_THIRD: ${{ secrets.GOMINING_COOKIES_THIRD }} line).
           GOMINING_ACCOUNT_LABELS: PRIMARY,SECONDARY
