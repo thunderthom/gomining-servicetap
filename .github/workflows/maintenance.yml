@@ -48,9 +48,8 @@ jobs:
           # GOMINING_COOKIES_<LABEL> secret below (e.g. a third account
           # needs GOMINING_ACCOUNT_LABELS: PRIMARY,SECONDARY,THIRD plus a
           # new GOMINING_COOKIES_THIRD: ${{ secrets.GOMINING_COOKIES_THIRD }} line).
-          GOMINING_ACCOUNT_LABELS: PRIMARY,SECONDARY
-          GOMINING_COOKIES_PRIMARY: ${{ secrets.GOMINING_COOKIES_PRIMARY }}
-          GOMINING_COOKIES_SECONDARY: ${{ secrets.GOMINING_COOKIES_SECONDARY }}
+          GOMINING_ACCOUNT_LABELS: MAIN
+          GOMINING_COOKIES_MAIN: ${{ secrets.GOMINING_COOKIES_MAIN }}
           GH_TOKEN: ${{ secrets.GH_PAT_SECRETS_WRITE }}
           # Optional -- error monitoring + cron check-ins. Script runs fine
           # without this secret set, just with no Sentry visibility.
